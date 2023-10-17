@@ -1,0 +1,24 @@
+spring:
+  application:
+    name: kafka-streams-demo-project
+  profiles:
+    active: local
+
+---
+
+spring:
+  config:
+    activate:
+      on-profile: local
+  kafka:
+    streams:
+      bootstrap-servers: localhost:9092
+      application-id: kafka-streams-demo-project
+    properties:
+      default:
+        deserialization:
+          exception:
+            handler: com.kafka.streams.demo.kafkastreamsdemoproject.exceptionhandler.StreamsDeserializationErrorHandler
+
+server:
+  port: 8080
