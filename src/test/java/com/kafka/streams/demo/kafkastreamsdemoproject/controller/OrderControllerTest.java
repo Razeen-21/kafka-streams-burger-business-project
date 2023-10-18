@@ -5,8 +5,6 @@ import com.kafka.streams.demo.kafkastreamsdemoproject.domain.OrderCountDTO;
 import com.kafka.streams.demo.kafkastreamsdemoproject.domain.OrderRevenue;
 import com.kafka.streams.demo.kafkastreamsdemoproject.domain.OrderRevenueMeatTypeDTO;
 import com.kafka.streams.demo.kafkastreamsdemoproject.domain.OrderRevenueStoreDTO;
-import com.kafka.streams.demo.kafkastreamsdemoproject.domain.RevenueAllMeatTypesPerStoreDTO;
-import com.kafka.streams.demo.kafkastreamsdemoproject.domain.RevenueAllStoresPerMeatTypeDTO;
 import com.kafka.streams.demo.kafkastreamsdemoproject.domain.RevenuePerStorePerMeatTypeDTO;
 import com.kafka.streams.demo.kafkastreamsdemoproject.service.OrderService;
 import org.junit.jupiter.api.AfterEach;
@@ -30,7 +28,7 @@ import java.util.HashMap;
 import java.util.List;
 import java.util.Objects;
 
-import static com.kafka.streams.demo.kafkastreamsdemoproject.topology.KafkaStreamsTopology.ORDERS;
+import static com.kafka.streams.demo.kafkastreamsdemoproject.topology.OrderStreamsTopology.ORDERS;
 import static org.mockito.ArgumentMatchers.anyString;
 import static org.mockito.Mockito.when;
 import static org.springframework.test.web.servlet.result.MockMvcResultMatchers.status;

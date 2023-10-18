@@ -23,12 +23,12 @@ import java.math.BigDecimal;
 import java.util.List;
 import java.util.UUID;
 
-import static com.kafka.streams.demo.kafkastreamsdemoproject.topology.KafkaStreamsTopology.ORDERS;
-import static com.kafka.streams.demo.kafkastreamsdemoproject.topology.KafkaStreamsTopology.ORDERS_COUNT_PER_MEAT_TYPE;
-import static com.kafka.streams.demo.kafkastreamsdemoproject.topology.KafkaStreamsTopology.ORDERS_COUNT_PER_STORE;
-import static com.kafka.streams.demo.kafkastreamsdemoproject.topology.KafkaStreamsTopology.REVENUE_TOTAL_PER_MEAT_TYPE;
-import static com.kafka.streams.demo.kafkastreamsdemoproject.topology.KafkaStreamsTopology.REVENUE_TOTAL_PER_MEAT_TYPE_PER_STORE;
-import static com.kafka.streams.demo.kafkastreamsdemoproject.topology.KafkaStreamsTopology.REVENUE_TOTAL_PER_STORE;
+import static com.kafka.streams.demo.kafkastreamsdemoproject.topology.OrderStreamsTopology.ORDERS;
+import static com.kafka.streams.demo.kafkastreamsdemoproject.topology.OrderStreamsTopology.ORDERS_COUNT_PER_MEAT_TYPE;
+import static com.kafka.streams.demo.kafkastreamsdemoproject.topology.OrderStreamsTopology.ORDERS_COUNT_PER_STORE;
+import static com.kafka.streams.demo.kafkastreamsdemoproject.topology.OrderStreamsTopology.REVENUE_TOTAL_PER_MEAT_TYPE;
+import static com.kafka.streams.demo.kafkastreamsdemoproject.topology.OrderStreamsTopology.REVENUE_TOTAL_PER_MEAT_TYPE_PER_STORE;
+import static com.kafka.streams.demo.kafkastreamsdemoproject.topology.OrderStreamsTopology.REVENUE_TOTAL_PER_STORE;
 import static org.junit.jupiter.api.Assertions.assertEquals;
 
 
@@ -41,7 +41,7 @@ public class OrderTopologyTest {
     TestInputTopic<String, String> inputTopic = null;
 
     static ObjectMapper objectMapper = new ObjectMapper();
-    KafkaStreamsTopology kafkaStreamsTopology = new KafkaStreamsTopology();
+    OrderStreamsTopology orderStreamsTopology = new OrderStreamsTopology();
     StreamsBuilder streamsBuilder = null;
 
     private static String generateBarcode() {
@@ -54,7 +54,7 @@ public class OrderTopologyTest {
     @BeforeEach
     void setUp() {
         streamsBuilder = new StreamsBuilder();
-        kafkaStreamsTopology.process(streamsBuilder);
+        orderStreamsTopology.process(streamsBuilder);
         var topology = streamsBuilder.build();
         topologyTestDriver = new TopologyTestDriver(topology);
         inputTopic = topologyTestDriver.createInputTopic(ORDERS, Serdes.String().serializer(), Serdes.String().serializer());

@@ -6,7 +6,6 @@ import com.kafka.streams.demo.kafkastreamsdemoproject.domain.OrderCountDTO;
 import com.kafka.streams.demo.kafkastreamsdemoproject.domain.OrderRevenue;
 import com.kafka.streams.demo.kafkastreamsdemoproject.domain.OrderRevenueMeatTypeDTO;
 import com.kafka.streams.demo.kafkastreamsdemoproject.domain.OrderRevenueStoreDTO;
-import com.kafka.streams.demo.kafkastreamsdemoproject.domain.RevenueAllMeatTypesPerStoreDTO;
 import com.kafka.streams.demo.kafkastreamsdemoproject.domain.RevenuePerStorePerMeatTypeDTO;
 import lombok.extern.slf4j.Slf4j;
 import org.springframework.beans.factory.annotation.Value;
@@ -14,7 +13,6 @@ import org.springframework.stereotype.Service;
 
 import java.util.ArrayList;
 import java.util.Collection;
-import java.util.HashMap;
 import java.util.List;
 import java.util.Objects;
 import java.util.Spliterators;
@@ -22,11 +20,11 @@ import java.util.stream.Collectors;
 import java.util.stream.Stream;
 import java.util.stream.StreamSupport;
 
-import static com.kafka.streams.demo.kafkastreamsdemoproject.topology.KafkaStreamsTopology.ORDERS_COUNT_PER_MEAT_TYPE;
-import static com.kafka.streams.demo.kafkastreamsdemoproject.topology.KafkaStreamsTopology.ORDERS_COUNT_PER_STORE;
-import static com.kafka.streams.demo.kafkastreamsdemoproject.topology.KafkaStreamsTopology.REVENUE_TOTAL_PER_MEAT_TYPE;
-import static com.kafka.streams.demo.kafkastreamsdemoproject.topology.KafkaStreamsTopology.REVENUE_TOTAL_PER_MEAT_TYPE_PER_STORE;
-import static com.kafka.streams.demo.kafkastreamsdemoproject.topology.KafkaStreamsTopology.REVENUE_TOTAL_PER_STORE;
+import static com.kafka.streams.demo.kafkastreamsdemoproject.topology.OrderStreamsTopology.ORDERS_COUNT_PER_MEAT_TYPE;
+import static com.kafka.streams.demo.kafkastreamsdemoproject.topology.OrderStreamsTopology.ORDERS_COUNT_PER_STORE;
+import static com.kafka.streams.demo.kafkastreamsdemoproject.topology.OrderStreamsTopology.REVENUE_TOTAL_PER_MEAT_TYPE;
+import static com.kafka.streams.demo.kafkastreamsdemoproject.topology.OrderStreamsTopology.REVENUE_TOTAL_PER_MEAT_TYPE_PER_STORE;
+import static com.kafka.streams.demo.kafkastreamsdemoproject.topology.OrderStreamsTopology.REVENUE_TOTAL_PER_STORE;
 
 @Service
 @Slf4j

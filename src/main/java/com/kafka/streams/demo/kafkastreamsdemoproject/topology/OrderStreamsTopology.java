@@ -24,7 +24,7 @@ import org.springframework.stereotype.Component;
 
 @Component
 @Slf4j
-public class KafkaStreamsTopology {
+public class OrderStreamsTopology {
     public static final String ORDERS = "orders";
     public static final String ORDERS_COUNT_PER_STORE = "orders_per_store";
 
