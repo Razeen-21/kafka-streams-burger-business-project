@@ -1,0 +1,290 @@
+{
+	"info": {
+		"_postman_id": "aa8d3a08-1610-4d52-aed9-7f077eaeecd7",
+		"name": "Kafka Streams Orders Demo",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "Count Orders By Store All",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:8081/v1/orders/count/by-store",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8081",
+					"path": [
+						"v1",
+						"orders",
+						"count",
+						"by-store"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Count Orders By Store Specific",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:8081/v1/orders/count/by-store?store_code=store1",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8081",
+					"path": [
+						"v1",
+						"orders",
+						"count",
+						"by-store"
+					],
+					"query": [
+						{
+							"key": "store_code",
+							"value": "store1"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Count Orders By Meat Type All",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:8080/v1/orders/count/by-meatType",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"v1",
+						"orders",
+						"count",
+						"by-meatType"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Count Orders By Meat Type Specific",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:8081/v1/orders/count/by-store?meat_type=CHICKEN",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8081",
+					"path": [
+						"v1",
+						"orders",
+						"count",
+						"by-store"
+					],
+					"query": [
+						{
+							"key": "meat_type",
+							"value": "CHICKEN"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Orders Revenue By Store All",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:8081/v1/orders/revenue/by-store",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8081",
+					"path": [
+						"v1",
+						"orders",
+						"revenue",
+						"by-store"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Orders Revenue By Store Specific",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:8081/v1/orders/revenue/by-store?store_code=store1",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8081",
+					"path": [
+						"v1",
+						"orders",
+						"revenue",
+						"by-store"
+					],
+					"query": [
+						{
+							"key": "store_code",
+							"value": "store1"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Orders Revenue By Meat Type All",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:8080/v1/orders/revenue/by-meatType",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"v1",
+						"orders",
+						"revenue",
+						"by-meatType"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Orders Revenue By Meat Type Specific",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:8080/v1/orders/revenue/by-meatType?meat_type=BEEF",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"v1",
+						"orders",
+						"revenue",
+						"by-meatType"
+					],
+					"query": [
+						{
+							"key": "meat_type",
+							"value": "BEEF"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Orders Revenue By Meat Type By Store All",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:8080/v1/orders/revenue/by-store/by-meatType",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"v1",
+						"orders",
+						"revenue",
+						"by-store",
+						"by-meatType"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Orders Revenue By All Meat Types By Store Specific",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:8080/v1/orders/revenue/by-store/by-meatType?store_code=store1",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"v1",
+						"orders",
+						"revenue",
+						"by-store",
+						"by-meatType"
+					],
+					"query": [
+						{
+							"key": "store_code",
+							"value": "store1"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Orders Revenue By Specific Meat Type By All Stores",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:8080/v1/orders/revenue/by-store/by-meatType?meat_type=VEGETARIAN",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"v1",
+						"orders",
+						"revenue",
+						"by-store",
+						"by-meatType"
+					],
+					"query": [
+						{
+							"key": "meat_type",
+							"value": "VEGETARIAN"
+						}
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}
