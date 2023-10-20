@@ -15,7 +15,7 @@ import org.springframework.kafka.config.TopicBuilder;
 import java.net.InetAddress;
 import java.net.UnknownHostException;
 
-import static com.kafka.streams.demo.kafkastreamsdemoproject.topology.KafkaStreamsTopology.ORDERS;
+import static com.kafka.streams.demo.kafkastreamsdemoproject.topology.OrderStreamsTopology.ORDERS;
 
 @Configuration
 public class KafkaStreamsConfiguration {
