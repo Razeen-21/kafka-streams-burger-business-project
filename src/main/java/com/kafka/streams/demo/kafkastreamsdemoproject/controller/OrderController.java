@@ -33,9 +33,9 @@ public class OrderController {
             var countOrdersByStore = orderService.getAllOrdersCountByStore(queryOtherHosts);
 
             //empty check
-            if(countOrdersByStore.isEmpty()){
-                return (ResponseEntity<?>) ResponseEntity.noContent();
-            }
+//            if(countOrdersByStore.isEmpty()){
+//                return ResponseEntity.noContent();
+//            }
 
             return ResponseEntity.ok(countOrdersByStore);
         }
