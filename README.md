@@ -7,7 +7,7 @@ When cloning and starting the application, please note the following terminal co
 
 Commands to initialize Kafka environment (cd to your version of kafka installed on your machine, I used kafka_2.13-3.5.0)
 
-To initialize Zookeeper: bin/zookeeper-server-starth config/zookeeper.properties
+To initialize Zookeeper: bin/zookeeper-server-start.sh config/zookeeper.properties
 
 To initialize local Kafka broker (server): bin/kafka-server-start.sh config/server.properties
 
